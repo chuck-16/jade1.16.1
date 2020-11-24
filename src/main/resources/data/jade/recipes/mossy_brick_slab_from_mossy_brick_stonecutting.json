@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "jade:mossy_brick"
+  },
+  "result": "jade:mossy_brick_slab",
+  "count": 2
+}

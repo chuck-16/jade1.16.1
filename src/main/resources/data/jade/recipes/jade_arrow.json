@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    " j ",
+    " s ",
+    " f "
+  ],
+  "key":
+  {
+    "j":
+    {
+      "item": "jade:jade_shard"
+    },
+    "s":
+    {
+      "item": "minecraft:stick"
+    },
+    "f":
+    {
+      "item": "minecraft:feather"
+    }
+  },
+  "result":
+  {
+    "item": "jade:jade_arrow",
+    "count": 4
+  }
+}

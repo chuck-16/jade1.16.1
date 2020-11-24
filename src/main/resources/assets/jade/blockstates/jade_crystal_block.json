@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "jade:block/jade_crystal_block" }
+  }
+}

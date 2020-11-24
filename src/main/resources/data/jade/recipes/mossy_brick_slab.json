@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "   ",
+    "   ",
+    "bbb"
+  ],
+  "key":
+  {
+    "b":
+    {
+      "item": "jade:mossy_brick"
+    }
+  },
+  "result":
+  {
+    "item": "jade:mossy_brick_slab",
+    "count": 6
+  }
+}

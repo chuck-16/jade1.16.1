@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "sss",
+    "sss",
+    "sss"
+  ],
+  "key":
+  {
+    "s":
+    {
+      "item": "jade:jade_shard"
+    }
+  },
+  "result":
+  {
+    "item": "jade:jade_block",
+    "count": 1
+  }
+}

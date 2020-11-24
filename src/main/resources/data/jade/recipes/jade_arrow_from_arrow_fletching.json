@@ -1,0 +1,6 @@
+{
+  "type": "minecraft:fletching_upgrade_recipe",
+  "base": "minecraft:arrow",
+  "addition": "jade:jade_shard",
+  "result": "jade:jade_arrow"
+}

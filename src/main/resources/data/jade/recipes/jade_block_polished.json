@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "   ",
+    " bb",
+    " bb"
+  ],
+  "key":
+  {
+    "b":
+    {
+      "item": "jade:jade_block"
+    }
+  },
+  "result":
+  {
+    "item": "jade:jade_block_polished",
+    "count": 1
+  }
+}
