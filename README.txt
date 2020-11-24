@@ -11,4 +11,8 @@ Feature List:
    -Jade Block Set
    -Ability to craft xp bottles with jade shards
    -Mossy Brick set
+
+Lead Proggrammer - chuck-16
+   Discord: chuck_16#4805
    
+Lead Artist - BurrowBling
