@@ -15,14 +15,14 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 public class FletchingScreen extends ContainerScreen<FletchingContainer> {
 
     // Location of the fletching table gui texture
-    private static final ResourceLocation FLETCHING_GUI_TEXTURE = new ResourceLocation("textures/gui/container/fletching_table_screen.png");
+    private static ResourceLocation FLETCHING_GUI_TEXTURE = new ResourceLocation("jade:textures/gui/container/fletching_table_screen.png");
 
     // Constructor
     public FletchingScreen(FletchingContainer screenContainer, PlayerInventory inv, ITextComponent titleIn) {
         super(screenContainer, inv, titleIn);
         // Set the width and height of the gui.  Should match the size of the texture!
         xSize = 176;
-        ySize = 133;
+        ySize = 166;
     }
 
     @Override

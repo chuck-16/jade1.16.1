@@ -34,6 +34,7 @@ public class FletchingContainer extends Container {
     private final IntReferenceHolder selectedRecipe = IntReferenceHolder.single();
     private final World world;
     private List<SmithingRecipe> recipes = Lists.newArrayList();
+    //private SmithingRecipe.Serializer
     /** The {@plainlink ItemStack} set in the input slot by the player. */
     private ItemStack itemStackInput = ItemStack.EMPTY;
     /**
@@ -76,9 +77,9 @@ public class FletchingContainer extends Container {
             }
 
             public ItemStack onTake(PlayerEntity thePlayer, ItemStack stack) {
-                ItemStack itemstack = FletchingContainer.this.inputInventorySlot.decrStackSize(1);
+                ItemStack itemstack = FletchingContainer.this.inputInventorySlotTwo.decrStackSize(1);
                 if (!itemstack.isEmpty()) {
-                    FletchingContainer.this.updateRecipeResultSlot();
+                    //FletchingContainer.this.updateRecipeResultSlot();
                 }
 
                 stack.getItem().onCreated(stack, thePlayer.world, thePlayer);
@@ -111,44 +112,21 @@ public class FletchingContainer extends Container {
         this(windowIdIn, playerInventoryIn, IWorldPosCallable.DUMMY);
     }
 
+    /*private void updateRecipeResultSlot(){
+        if (inputInventorySlot.inventory == reci)
+    }*/
+
 
     @Override
     public boolean canInteractWith(PlayerEntity playerIn) {
         return isWithinUsableDistance(this.worldPosCallable, playerIn, Blocks.FLETCHING_TABLE);
     }
 
-    private void updateAvailableRecipes(IInventory inventoryIn, ItemStack stack) {
-        this.recipes.clear();
-        this.selectedRecipe.set(-1);
-        this.outputInventorySlot.putStack(ItemStack.EMPTY);
-        if (!stack.isEmpty()) {
-            this.recipes = this.world.getRecipeManager().getRecipes(IRecipeType.field_234827_g_, inventoryIn, this.world);
-        }
-
-    }
     public ContainerType<?> getType() {
         return StartupCommon.fletchingContainerType;
     }
 
-    @OnlyIn(Dist.CLIENT)
-    public void setInventoryUpdateListener(Runnable listenerIn) {
-        this.inventoryUpdateListener = listenerIn;
-    }
 
-    private void updateRecipeResultSlot() {
-        if (!this.recipes.isEmpty() && this.func_241818_d_(this.selectedRecipe.get())) {
-            SmithingRecipe fletchingRecipe = this.recipes.get(this.selectedRecipe.get());
-            this.outputInventorySlot.putStack(fletchingRecipe.getCraftingResult(this.inputInventory));
-        } else {
-            this.outputInventorySlot.putStack(ItemStack.EMPTY);
-        }
-
-        this.detectAndSendChanges();
-    }
-
-    private boolean func_241818_d_(int p_241818_1_) {
-        return p_241818_1_ >= 0 && p_241818_1_ < this.recipes.size();
-    }
 
     public boolean canMergeSlot(ItemStack stack, Slot slotIn) {
         return slotIn.inventory != this.inventory && super.canMergeSlot(stack, slotIn);
